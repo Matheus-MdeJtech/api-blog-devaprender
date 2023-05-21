@@ -4,6 +4,7 @@ import json
 import jwt
 from datetime import datetime, timedelta
 from functools import wraps
+import os
 
 # Comentei
 
@@ -194,4 +195,6 @@ def excluir_autor(autor,id_autor):
 
     return jsonify({'Mensagem':'Autor Excluido!'})
 
-app.run(port=5000, host='localhost', debug=True)
+if __name__ == '__main__':
+    #app.run(port=5000, host='localhost', debug=True)
+    app.run(debug=True, port=os.getenv('PORT', default=5000))
