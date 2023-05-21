@@ -5,6 +5,8 @@ import jwt
 from datetime import datetime, timedelta
 from functools import wraps
 
+# Comentei
+
 def token_obrigatorio(f):
     @wraps(f)
     def decorated(*args, **kwargs):
